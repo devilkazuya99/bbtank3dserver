@@ -29,8 +29,8 @@ public class TankWebSocket {
 
 	@OnWebSocketMessage
 	public void message(Session session, String message) throws IOException {
-		System.out.println("Got: " + message); // Print message
-//		session.getRemote().sendString(message); // and send it back
+		if(Server.DEBUG_MODE)
+			System.out.println("Got: " + message); // Print message
 
 		// Do a broadcast in parallel.
 		sessions.parallelStream().forEach(sess -> {
