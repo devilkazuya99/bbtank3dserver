@@ -4,7 +4,7 @@ import static spark.Spark.*;
 
 public class Server {
 
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 	
 	public static void main(String[] args) {
 		for (String arg : args) {

@@ -24,6 +24,7 @@ public class TankWebSocket {
 
 	@OnWebSocketClose
 	public void closed(Session session, int statusCode, String reason) {
+		System.out.println("session = " + session + " statusCode = " + statusCode + " reason = " + reason);
 		sessions.remove(session);
 	}
 
